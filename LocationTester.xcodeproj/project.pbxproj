@@ -12,6 +12,8 @@
 		4F3331151EE96C89000C8570 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3331131EE96C89000C8570 /* Main.storyboard */; };
 		4F3331171EE96C89000C8570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F3331161EE96C89000C8570 /* Assets.xcassets */; };
 		4F33311A1EE96C89000C8570 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F3331181EE96C89000C8570 /* LaunchScreen.storyboard */; };
+		4F3331231EE96DDC000C8570 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F3331221EE96DDC000C8570 /* CoreLocation.framework */; };
+		4F3331251EE96E00000C8570 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3331241EE96E00000C8570 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		4F3331161EE96C89000C8570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F3331191EE96C89000C8570 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F33311B1EE96C89000C8570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F3331221EE96DDC000C8570 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4F3331241EE96E00000C8570 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3331231EE96DDC000C8570 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				4F33310E1EE96C89000C8570 /* LocationTester */,
 				4F33310D1EE96C89000C8570 /* Products */,
+				4F3331211EE96DDC000C8570 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +62,21 @@
 			children = (
 				4F33310F1EE96C89000C8570 /* AppDelegate.swift */,
 				4F3331111EE96C89000C8570 /* ViewController.swift */,
+				4F3331241EE96E00000C8570 /* LocationManager.swift */,
 				4F3331131EE96C89000C8570 /* Main.storyboard */,
 				4F3331161EE96C89000C8570 /* Assets.xcassets */,
 				4F3331181EE96C89000C8570 /* LaunchScreen.storyboard */,
 				4F33311B1EE96C89000C8570 /* Info.plist */,
 			);
 			path = LocationTester;
+			sourceTree = "<group>";
+		};
+		4F3331211EE96DDC000C8570 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F3331221EE96DDC000C8570 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +113,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 6DV8M4CEG3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -139,6 +159,7 @@
 			files = (
 				4F3331121EE96C89000C8570 /* ViewController.swift in Sources */,
 				4F3331101EE96C89000C8570 /* AppDelegate.swift in Sources */,
+				4F3331251EE96E00000C8570 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +286,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6DV8M4CEG3;
 				INFOPLIST_FILE = LocationTester/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eu.curiousit.LocationTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +300,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6DV8M4CEG3;
 				INFOPLIST_FILE = LocationTester/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eu.curiousit.LocationTester;
 				PRODUCT_NAME = "$(TARGET_NAME)";
